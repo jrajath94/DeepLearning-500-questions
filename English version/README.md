@@ -35,7 +35,7 @@ Example:
 There are always some difficult hyperparameters when using machine learning algorithms. For example, weight attenuation size, Gaussian kernel width, and so on. The algorithm does not set these parameters, but instead requires you to set their values. The set value has a large effect on the result. Common practices for setting hyperparameters are:
 
 1. Guess and check: Select parameters based on experience or intuition, and iterate over.
-2. Grid Search: Let the computer try to evenly distribute a set of values ​​within a certain range.
+2. Grid Search: Let the computer try to evenly distribute a set of values within a certain range.
 3. Random search: Let the computer randomly pick a set of values.
 4. Bayesian optimization: Using Bayesian optimization of hyperparameters, it is difficult to meet the Bayesian optimization algorithm itself.
 5. Perform local optimization with good initial guessing: this is the MITIE method, which uses the BOBYQA algorithm and has a carefully chosen starting point. Since BOBYQA only looks for the nearest local optimal solution, the success of this method depends largely on whether there is a good starting point. In the case of MITIE, we know a good starting point, but this is not a universal solution, because usually you won't know where the good starting point is. On the plus side, this approach is well suited to finding local optimal solutions. I will discuss this later.
@@ -77,7 +77,7 @@ Submitted MD version chapter: Please check MarkDown
 1.6 Derivative Bias Calculation 3  
 What is the difference between 1.7 derivatives and partial derivatives? 3  
 1.8 Eigenvalue decomposition and feature vector 3  
-1.9 What is the relationship between singular values ​​and eigenvalues? 4  
+1.9 What is the relationship between singular values and eigenvalues? 4  
 1.10 Why should machine learning use probabilities? 4  
 1.11 What is the difference between a variable and a random variable? 4  
 1.12 Common probability distribution? 5  
@@ -221,7 +221,7 @@ How does the logarithmic loss function measure loss? 31
 3.4.9 How does the Softmax function be applied to multiple classifications? 112  
 3.5 Batch_Size 113  
 3.5.1 Why do I need Batch_Size? 113  
-3.5.2 Selection of Batch_Size Values ​​114  
+3.5.2 Selection of Batch_Size Values 114  
 3.5.3 What are the benefits of increasing Batch_Size within a reasonable range? 114  
 3.5.4 What is the disadvantage of blindly increasing Batch_Size? 114  
 3.5.5 What is the impact of Batch_Size on the training effect? 114  
