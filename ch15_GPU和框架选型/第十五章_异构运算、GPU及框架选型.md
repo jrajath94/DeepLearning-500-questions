@@ -163,22 +163,22 @@ Nvidia一般每一两年发布一次新版本的GPU，例如2017年发布的是G
     * 首先出现cuda软件的版权说明，可以直接按q键跳过阅读  
 
     * Do you accept the previously read EULA?
-     ​accept/decline/quit: **accept**
+     accept/decline/quit: **accept**
 
     * Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 384.81?
-     ​(y)es/(n)o/(q)uit:**no**
+     (y)es/(n)o/(q)uit:**no**
 
     * Install the CUDA 9.0 Toolkit?
-     ​(y)es/(n)o/(q)uit:**yes**
+     (y)es/(n)o/(q)uit:**yes**
   
     * Enter Toolkit Location
-     ​ [ default is /usr/local/cuda-9.0 ]:直接按enter键即可
+      [ default is /usr/local/cuda-9.0 ]:直接按enter键即可
 
     *  Do you want to install a symbolic link at /usr/local/cuda?
-     ​(y)es/(n)o/(q)uit:**yes**
+     (y)es/(n)o/(q)uit:**yes**
 
     * Install the CUDA 9.0 Samples?
-     ​ (y)es/(n)o/(q)uit:**yes**
+      (y)es/(n)o/(q)uit:**yes**
 
     以上步骤基本就是cuda的安装步骤。
 
