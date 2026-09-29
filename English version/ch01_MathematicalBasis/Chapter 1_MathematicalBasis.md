@@ -10,7 +10,7 @@ A scalar represents a single number that is different from most other objects st
 A vector represents a set of ordered numbers. By indexing in the order, we can determine each individual number. Usually we give the lowercase variable name of the vector bold, such as xx. Elements in a vector can be represented in italics with a footer. The first element of the vector $X$ is $X_1$, the second element is $X_2$, and so on. We will also indicate the type of element (real, imaginary, etc.) stored in the vector.
 
 **Matrix**
-A matrix is ​​a collection of objects with the same features and latitudes, represented as a two-dimensional data table. The meaning is that an object is represented as a row in a matrix, and a feature is represented as a column in a matrix, and each feature has a numerical value. The name of an uppercase variable that is usually given to the matrix bold, such as $A$.
+A matrix is a collection of objects with the same features and latitudes, represented as a two-dimensional data table. The meaning is that an object is represented as a row in a matrix, and a feature is represented as a column in a matrix, and each feature has a numerical value. The name of an uppercase variable that is usually given to the matrix bold, such as $A$.
 
 **Tensor**
 In some cases, we will discuss arrays with coordinates over two dimensions. In general, the elements in an array are distributed in a regular grid of several dimensional coordinates, which we call a tensor. Use $A$ to represent the tensor "A". The element with a coordinate of $(i,j,k)$ in the tensor $A$ is denoted as $A_{(i,j,k)}$.
@@ -23,19 +23,19 @@ In some cases, we will discuss arrays with coordinates over two dimensions. In g
 > The tensor is not only knowing the length of the stick, but also knowing whether the stick points to the front or the back, and how much the stick is deflected up/down and left/right.
 
 ## 1.2 What is the difference between tensor and matrix?
-- From an algebra perspective, a matrix is ​​a generalization of vectors. The vector can be seen as a one-dimensional "table" (that is, the components are arranged in a row in order), the matrix is ​​a two-dimensional "table" (components are arranged in the vertical and horizontal positions), then the $n$ order tensor is the so-called $n$ dimension "Form". The strict definition of tensors is described using linear mapping.
-- Geometrically, a matrix is ​​a true geometric quantity, that is, it is something that does not change with the coordinate transformation of the frame of reference. Vectors also have this property.
+- From an algebra perspective, a matrix is a generalization of vectors. The vector can be seen as a one-dimensional "table" (that is, the components are arranged in a row in order), the matrix is a two-dimensional "table" (components are arranged in the vertical and horizontal positions), then the $n$ order tensor is the so-called $n$ dimension "Form". The strict definition of tensors is described using linear mapping.
+- Geometrically, a matrix is a true geometric quantity, that is, it is something that does not change with the coordinate transformation of the frame of reference. Vectors also have this property.
 - The tensor can be expressed in a 3×3 matrix form.
 - A three-dimensional array representing the number of scalars and the representation vector can also be regarded as a matrix of 1 × 1, 1 × 3, respectively.
 
 ## 1.3 Matrix and vector multiplication results
-A matrix of $m$ rows of $n$ columns is multiplied by a $n$ row vector, and finally a vector of $m$ rows is obtained. The algorithm is that each row of data in the matrix is ​​treated as a row vector and multiplied by the vector.
+A matrix of $m$ rows of $n$ columns is multiplied by a $n$ row vector, and finally a vector of $m$ rows is obtained. The algorithm is that each row of data in the matrix is treated as a row vector and multiplied by the vector.
 
 ## 1.4 Vector and matrix norm induction
 **Vector norm**
 Define a vector as: $\vec{a}=[-5, 6, 8, -10]$. Any set of vectors is set to $\vec{x}=(x_1,x_2,...,x_N)$. The different norms are solved as follows:
 
-- 1 norm of the vector: the sum of the absolute values ​​of the elements of the vector. The 1 norm result of the above vector $\vec{a}$ is: 29.
+- 1 norm of the vector: the sum of the absolute values of the elements of the vector. The 1 norm result of the above vector $\vec{a}$ is: 29.
   
 $$
 \Vert\vec{x}\Vert_1=\sum_{i=1}^N\vert{x_i}\vert
@@ -47,13 +47,13 @@ $$
 \Vert\vec{x}\Vert_2=\sqrt{\sum_{i=1}^N{\vert{x_i}\vert}^2}
 $$
 
-- Negative infinite norm of the vector: the smallest of the absolute values ​​of all elements of the vector: the negative infinite norm of the above vector $\vec{a}$ is: 5.
+- Negative infinite norm of the vector: the smallest of the absolute values of all elements of the vector: the negative infinite norm of the above vector $\vec{a}$ is: 5.
   
 $$
 \Vert\vec{x}\Vert_{-\infty}=\min{|{x_i}|}
 $$
 
-- The positive infinite norm of the vector: the largest of the absolute values ​​of all elements of the vector: the positive infinite norm of the above vector $\vec{a}$ is: 10.
+- The positive infinite norm of the vector: the largest of the absolute values of all elements of the vector: the positive infinite norm of the above vector $\vec{a}$ is: 10.
   
 $$
 \Vert\vec{x}\Vert_{+\infty}=\max{|{x_i}|}
@@ -67,9 +67,9 @@ $$
 
 **Matrix of the matrix**
 
-Define a matrix $A=[-1, 2, -3; 4, -6, 6]$. The arbitrary matrix is ​​defined as: $A_{m\times n}$ with elements of $a_{ij}$.
+Define a matrix $A=[-1, 2, -3; 4, -6, 6]$. The arbitrary matrix is defined as: $A_{m\times n}$ with elements of $a_{ij}$.
 
-The norm of the matrix is ​​defined as
+The norm of the matrix is defined as
 
 $$
 \Vert{A}\Vert_p :=\sup_{x\neq 0}\frac{\Vert{Ax}\Vert_p}{\Vert{x}\Vert_p}
@@ -77,7 +77,7 @@ $$
 
 When the vectors take different norms, different matrix norms are obtained accordingly.
 
-- **1 norm of the matrix (column norm)**: The absolute values ​​of the elements on each column of the matrix are first summed, and then the largest one is taken, (column and maximum), the 1 matrix of the above matrix $A$ The number first gets $[5,8,9]$, and the biggest final result is: 9.
+- **1 norm of the matrix (column norm)**: The absolute values of the elements on each column of the matrix are first summed, and then the largest one is taken, (column and maximum), the 1 matrix of the above matrix $A$ The number first gets $[5,8,9]$, and the biggest final result is: 9.
   
 $$
 \Vert A\Vert_1=\max_{1\le j\le}\sum_{i=1}^m|{a_{ij}}|
@@ -90,15 +90,15 @@ $$
 $$
 
 Where $\lambda_{max}(A^T A)$ is the maximum value of the absolute value of the eigenvalue of $A^T A$.
-- **Infinite norm of the matrix (row norm)**: The absolute values ​​of the elements on each line of the matrix are first summed, and then the largest one (row and maximum) is taken, and the above matrix of $A$ is 1 The number first gets $[6;16]$, and the biggest final result is: 16.
+- **Infinite norm of the matrix (row norm)**: The absolute values of the elements on each line of the matrix are first summed, and then the largest one (row and maximum) is taken, and the above matrix of $A$ is 1 The number first gets $[6;16]$, and the biggest final result is: 16.
 $$
 \Vert A\Vert_{\infty}=\max_{1\le i \le n}\sum_{j=1}^n |{a_{ij}}|
 $$
 
-- **Matrix kernel norm**: the sum of the singular values ​​of the matrix (decomposed of the matrix svd), this norm can be used for low rank representation (because the minimization of the kernel norm is equivalent to minimizing the rank of the matrix - Low rank), the final result of matrix A above is: 10.9287.
+- **Matrix kernel norm**: the sum of the singular values of the matrix (decomposed of the matrix svd), this norm can be used for low rank representation (because the minimization of the kernel norm is equivalent to minimizing the rank of the matrix - Low rank), the final result of matrix A above is: 10.9287.
 
 - **Matrix L0 norm**: the number of non-zero elements of the matrix, usually used to represent sparse, the smaller the L0 norm, the more elements, the more sparse, the final result of the above matrix $A$ is :6.
-- **Matrix L1 norm**: the sum of the absolute values ​​of each element in the matrix, which is the optimal convex approximation of the L0 norm, so it can also represent sparseness, the final result of the above matrix $A$ is: 22 .
+- **Matrix L1 norm**: the sum of the absolute values of each element in the matrix, which is the optimal convex approximation of the L0 norm, so it can also represent sparseness, the final result of the above matrix $A$ is: 22 .
 - **F norm of matrix **: the sum of the squares of the elements of the matrix and the square root of the square. It is also commonly called the L2 norm of the matrix. Its advantage is that it is a convex function, which can be solved and easy to calculate. The final result of the above matrix A is: 10.0995.
   
 $$
@@ -117,7 +117,7 @@ $$
 - Positive inertia index is equal to $n$;
 - Contract in unit matrix $E$ (ie: canonical form is $E$)
 - the main diagonal elements in the standard form are all positive;
-- the eigenvalues ​​are all positive;
+- the eigenvalues are all positive;
 - is a measure matrix of a base.
 
 ## 1.6 Derivative Bias Calculation
@@ -182,7 +182,7 @@ There is no essential difference between the derivative and the partial derivati
 Only the amount of change is derived, and the solution of the partial derivative is transformed into the derivation of the unary function.
 
 ## 1.8 Eigenvalue decomposition and eigenvectors
-- eigenvalue decomposition can obtain eigenvalues ​​and eigenvectors;
+- eigenvalue decomposition can obtain eigenvalues and eigenvectors;
 
 - The eigenvalue indicates how important this feature is, and the eigenvector indicates what this feature is.
 
@@ -198,10 +198,10 @@ $$
 A=Q\sum Q^{-1}
 $$
 
-Where $Q$ is the matrix of the eigenvectors of the matrix $A$, $\sum$ is a diagonal matrix, and each diagonal element is a eigenvalue, and the eigenvalues ​​are arranged from large to small. The eigenvectors corresponding to these eigenvalues ​​describe the direction of the matrix change (from the primary change to the secondary change arrangement). That is to say, the information of the matrix $A$ can be represented by its eigenvalues ​​and eigenvectors.
+Where $Q$ is the matrix of the eigenvectors of the matrix $A$, $\sum$ is a diagonal matrix, and each diagonal element is a eigenvalue, and the eigenvalues are arranged from large to small. The eigenvectors corresponding to these eigenvalues describe the direction of the matrix change (from the primary change to the secondary change arrangement). That is to say, the information of the matrix $A$ can be represented by its eigenvalues and eigenvectors.
 
-## 1.9 What is the relationship between singular values ​​and eigenvalues?
-So how do singular values ​​and eigenvalues ​​correspond? We multiply the transpose of a matrix $A$ by $A$ and the eigenvalues ​​of $AA^T$, which have the following form:
+## 1.9 What is the relationship between singular values and eigenvalues?
+So how do singular values and eigenvalues correspond? We multiply the transpose of a matrix $A$ by $A$ and the eigenvalues of $AA^T$, which have the following form:
 
 $$
 (A^TA)V = \lambda V
@@ -214,7 +214,7 @@ $$
 $$
 
 Here $\sigma$ is the singular value, and $u$ is the left singular vector mentioned above. [Prove that the buddy did not give]
-The singular value $\sigma$ is similar to the eigenvalues, and is also ranked from large to small in the matrix $\sum$, and the reduction of $\sigma$ is particularly fast, in many cases, the first 10% or even the 1% singularity. The sum of the values ​​accounts for more than 99% of the sum of all the singular values. In other words, we can also approximate the description matrix with the singular value of the previous $r$($r$ is much smaller than $m, n$), that is, the partial singular value decomposition:
+The singular value $\sigma$ is similar to the eigenvalues, and is also ranked from large to small in the matrix $\sum$, and the reduction of $\sigma$ is particularly fast, in many cases, the first 10% or even the 1% singularity. The sum of the values accounts for more than 99% of the sum of all the singular values. In other words, we can also approximate the description matrix with the singular value of the previous $r$($r$ is much smaller than $m, n$), that is, the partial singular value decomposition:
 
 $$
 A_{m\times n}\approx U_{m \times r}\sum_{r\times r}V_{r \times n}^T
@@ -278,7 +278,7 @@ If a function $p $ is a PDF of x, then it must satisfy the following conditions
 - $∀x∈X,p(x)≥0$. Note that we do not require $p(x)≤1$ because $p(x)$ is not the specific probability of representing this state, and Is a relative size (density) of probability. The specific probability requires integration to find.
 - $∫p(x)dx=1$, the score is down, the sum is still 1, and the sum of the probabilities is still 1.
 
-Note: PDF$p(x)$ does not directly give a probability to a particular state, giving a density. In contrast, it gives a probability that the area falling within a small area of ​​$δx$ is $ p(x)δx$. Thus, we can't find the probability of a particular state. What we can find is that the probability that a state $x$ falls within a certain interval $[a,b]$ is $ \int_{a}^{b}p(x)dx$.
+Note: PDF$p(x)$ does not directly give a probability to a particular state, giving a density. In contrast, it gives a probability that the area falling within a small area of $δx$ is $ p(x)δx$. Thus, we can't find the probability of a particular state. What we can find is that the probability that a state $x$ falls within a certain interval $[a,b]$ is $ \int_{a}^{b}p(x)dx$.
 
 ## 1.13 Common probability distribution
 
