@@ -161,7 +161,7 @@ Let the final error be $ E $ and the activation function of the output layer be 
 
 As shown in the figure above, the input layer has three nodes, which we numbered as 1, 2, and 3; the four nodes of the hidden layer are numbered 4, 5, 6, and 7; the last two nodes of the output layer are numbered 8. 9. For example, node 4 of the hidden layer is connected to the three nodes 1, 2, and 3 of the input layer, and the weights on the connection are $ w_{41}, w_{42}, w_{43} $.
 
-In order to calculate the output value of node 4, we must first get the output values ​​of all its upstream nodes (ie nodes 1, 2, 3). Nodes 1, 2, and 3 are nodes of the input layer, so their output value is the input vector itself. According to the corresponding relationship in the above picture, you can see that the output values ​​of nodes 1, 2, and 3 are $ x_1, x_2, x_3 $, respectively.
+In order to calculate the output value of node 4, we must first get the output values of all its upstream nodes (ie nodes 1, 2, 3). Nodes 1, 2, and 3 are nodes of the input layer, so their output value is the input vector itself. According to the corresponding relationship in the above picture, you can see that the output values of nodes 1, 2, and 3 are $ x_1, x_2, x_3 $, respectively.
 
 $$
 A_4 = \sigma(w^T \cdot a) = \sigma(w_{41}x_4 + w_{42}x_2 + w_{43}a_3 + w_{4b})
@@ -169,7 +169,7 @@ $$
 
 Where $ w_{4b} $ is the offset of node 4.
 
-Similarly, we can continue to calculate the output values ​​of nodes 5, 6, and 7 $ a_5, a_6, a_7 $.
+Similarly, we can continue to calculate the output values of nodes 5, 6, and 7 $ a_5, a_6, a_7 $.
 
 Calculate the output value of node 8 of the output layer $ y_1 $:
 
@@ -179,7 +179,7 @@ $$
 
 Where $ w_{8b} $ is the offset of node 8.
 
-For the same reason, we can also calculate $ y_2 $. So that the output values ​​of all the nodes in the output layer are calculated, we get the output vector $ y_1, y_2 $ of the neural network when the input vectors $ x_1, x_2, x_3, x_4 $. Here we also see that the output vector has the same number of dimensions as the output layer neurons.
+For the same reason, we can also calculate $ y_2 $. So that the output values of all the nodes in the output layer are calculated, we get the output vector $ y_1, y_2 $ of the neural network when the input vectors $ x_1, x_2, x_3, x_4 $. Here we also see that the output vector has the same number of dimensions as the output layer neurons.
 
 ### 3.2.3 How to calculate the output value of convolutional neural network?
 
@@ -319,7 +319,7 @@ $$
 
 2. Implicit layer --> output layer:
 
-Calculate the values ​​of the output layer neurons $ o1 $ and $ o2 $ :
+Calculate the values of the output layer neurons $ o1 $ and $ o2 $ :
 
 $$
 Net_{o1} = w_5 * out_{h1} + w_6 * out_{h2} + b_2 * 1
@@ -382,11 +382,11 @@ Premise: within a certain range.
 
 ### 3.3.2 How to find the optimal value of the hyperparameter?
 
-There are always some difficult parameters to adjust when using machine learning algorithms. For example, weight attenuation size, Gaussian kernel width, and so on. These parameters require manual settings, and the set values ​​have a large impact on the results. Common methods for setting hyperparameters are:
+There are always some difficult parameters to adjust when using machine learning algorithms. For example, weight attenuation size, Gaussian kernel width, and so on. These parameters require manual settings, and the set values have a large impact on the results. Common methods for setting hyperparameters are:
 
 1. Guess and check: Select parameters based on experience or intuition, and iterate over.
 
-2. Grid Search: Let the computer try to evenly distribute a set of values ​​within a certain range.
+2. Grid Search: Let the computer try to evenly distribute a set of values within a certain range.
 
 3. Random search: Let the computer randomly pick a set of values.
 
@@ -525,7 +525,7 @@ Unilateral inhibition
 2. A relatively broad excitement boundary;
 3. Sparse activation;
 
-From the image, the ReLU function is a piecewise linear function that changes all negative values ​​to 0, while the positive values ​​are unchanged, thus becoming a one-sided suppression.
+From the image, the ReLU function is a piecewise linear function that changes all negative values to 0, while the positive values are unchanged, thus becoming a one-sided suppression.
 
 Because of this unilateral inhibition, the neurons in the neural network also have sparse activation.
 
@@ -553,7 +553,7 @@ The more visual mapping process is shown below:
 
 ![****](./img/ch3/3.4.9.3.png)
 
-In the case of softmax, the original output is $3,1,-3$, which is mapped to the value of $(0,1)$ by the softmax function, and the sum of these values ​​is $1 $( Satisfy the nature of the probability), then we can understand it as a probability, when we finally select the output node, we can select the node with the highest probability (that is, the value corresponds to the largest) as our prediction target!
+In the case of softmax, the original output is $3,1,-3$, which is mapped to the value of $(0,1)$ by the softmax function, and the sum of these values is $1 $( Satisfy the nature of the probability), then we can understand it as a probability, when we finally select the output node, we can select the node with the highest probability (that is, the value corresponds to the largest) as our prediction target!
 
 ### 3.4.10 Cross entropy cost function definition and its derivative derivation
 
@@ -612,11 +612,11 @@ The choice of Batch, the first decision is the direction of the decline.
 If the data set is small, it can take the form of a full data set. The benefits are:
 
 1. The direction determined by the full data set better represents the sample population and is more accurately oriented in the direction of the extreme value.
-2. Since the gradient values ​​of different weights are very different, it is difficult to select a global learning rate. Full Batch Learning can use Rprop to update each weight individually based on gradient symbols only.
+2. Since the gradient values of different weights are very different, it is difficult to select a global learning rate. Full Batch Learning can use Rprop to update each weight individually based on gradient symbols only.
 
 For larger data sets, if you use a full data set, the downside is:
 1. With the massive growth of data sets and memory limitations, it is becoming increasingly infeasible to load all of the data at once.
-2. Iteratively in the Rprop manner, due to the sampling difference between the batches, the gradient correction values ​​cancel each other and cannot be corrected. This was followed by a compromise with RMSProp.
+2. Iteratively in the Rprop manner, due to the sampling difference between the batches, the gradient correction values cancel each other and cannot be corrected. This was followed by a compromise with RMSProp.
 
 ### 3.5.2 Selection of Batch_Size value
 
@@ -708,7 +708,7 @@ Meaning: The processed data conforms to the standard normal distribution, ie the
 
 3. Nonlinear normalization
 
-Scope of application: It is often used in scenes where data differentiation is relatively large. Some values ​​are large and some are small. The original values ​​are mapped by some mathematical function. The method includes $ log $, exponent, tangent, and so on.
+Scope of application: It is often used in scenes where data differentiation is relatively large. Some values are large and some are small. The original values are mapped by some mathematical function. The method includes $ log $, exponent, tangent, and so on.
 
 ### 3.6.6 Local response normalization
 
@@ -845,7 +845,7 @@ There is a problem with the deep network:
 
 **Solution:**
 
-Layer-by-layer greedy training, unsupervised pre-training is the first hidden layer of the training network, and then the second one is trained... Finally, these trained network parameter values ​​are used as the initial values ​​of the overall network parameters.
+Layer-by-layer greedy training, unsupervised pre-training is the first hidden layer of the training network, and then the second one is trained... Finally, these trained network parameter values are used as the initial values of the overall network parameters.
 
 After pre-training, a better local optimal solution can be obtained.
 
@@ -855,7 +855,7 @@ Training with other people's parameters, modified network and their own data, so
 
 ** Example of fine-tuning the model: **
 
-We know that CNN has made great progress in the field of image recognition. If you want to apply CNN to our own dataset, you will usually face a problem: usually our dataset will not be particularly large, generally no more than 10,000, or even less, each type of image is only a few Ten or ten. At this time, the idea of ​​directly applying these data to train a network is not feasible, because a key factor in the success of deep learning is the training set consisting of a large number of tagged data. If we only use this data on hand, even if we use a very good network structure, we can't achieve high performance. At this time, the idea of ​​fine-tuning can solve our problem well: we pass the model trained on ImageNet (such as Caf).feNet, VGGNet, ResNet) Fine-tune and apply to our own dataset.
+We know that CNN has made great progress in the field of image recognition. If you want to apply CNN to our own dataset, you will usually face a problem: usually our dataset will not be particularly large, generally no more than 10,000, or even less, each type of image is only a few Ten or ten. At this time, the idea of directly applying these data to train a network is not feasible, because a key factor in the success of deep learning is the training set consisting of a large number of tagged data. If we only use this data on hand, even if we use a very good network structure, we can't achieve high performance. At this time, the idea of fine-tuning can solve our problem well: we pass the model trained on ImageNet (such as Caf).feNet, VGGNet, ResNet) Fine-tune and apply to our own dataset.
 
 ### 3.7.3 Is the network parameter updated when fine tuning?
 
@@ -916,7 +916,7 @@ $$
 Xa_1^{(2)} = f(W_{11}^{(1)} x_1 + W_{12}^{(1)} x_2 + W_{13}^{(1)} x_3 + b_1^{( 1)})a_2^{(2)} = f(W_{21}^{(1)} x_1 + W_{22}^{(1)} x_2 + W_{23}^{(1)} x_3 +
 $$
 
-If each weight is the same, then in a multi-layer network, starting from the second layer, the input values ​​of each layer are the same, that is, $ a1=a2=a3=.... $, since they are all the same, It is equivalent to an input, why? ?
+If each weight is the same, then in a multi-layer network, starting from the second layer, the input values of each layer are the same, that is, $ a1=a2=a3=.... $, since they are all the same, It is equivalent to an input, why? ?
 
 If it is a reverse transfer algorithm (see the above connection if you don't understand it here), the iterative partial derivative of the bias term and the weight term is calculated as follows
 
@@ -957,7 +957,7 @@ Another way to solve the uncalibrated variance problem is to set all weight matr
 
 ### 3.8.6 Initialization deviation
 
-It is possible to initialize the deviation to zero, which is also very common, because asymmetry damage is caused by small random numbers of weights. Because ReLU has non-linear characteristics, some people like to use to set all deviations to small constant values ​​such as 0.01, because this ensures that all ReLU units activate the fire at the very beginning and therefore can acquire and propagate some Gradient value. However, it is not clear whether this will provide continuous improvement (in fact some results indicate that doing so makes performance worse), so it is more common to simply initialize the deviation to 0.
+It is possible to initialize the deviation to zero, which is also very common, because asymmetry damage is caused by small random numbers of weights. Because ReLU has non-linear characteristics, some people like to use to set all deviations to small constant values such as 0.01, because this ensures that all ReLU units activate the fire at the very beginning and therefore can acquire and propagate some Gradient value. However, it is not clear whether this will provide continuous improvement (in fact some results indicate that doing so makes performance worse), so it is more common to simply initialize the deviation to 0.
 
 ## 3.9 Softmax
 
